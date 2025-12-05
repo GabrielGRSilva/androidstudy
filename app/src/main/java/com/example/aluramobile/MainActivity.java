@@ -1,18 +1,19 @@
 package com.example.aluramobile;
-import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Student List");
         setContentView(R.layout.activity_main);
         ArrayList<String> alunos = new ArrayList<>(Arrays.asList("AlunoDoido", "AlunoMaluco", "AlunoAlucicrazy", "AlunoAdicional"));
         ListView listaAlunos = findViewById(R.id.main_activity_lv1); //ListView de alunos
